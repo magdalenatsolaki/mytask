@@ -9,8 +9,6 @@ pluginManagement {
     val kotlinVersion: String by settings
     val agpVersion: String by settings
     val composeVersion: String by settings
-    val appcompatVersion: String by settings
-    val coreKtxVersion: String by settings
 
     plugins {
         kotlin("multiplatform") version kotlinVersion apply false
@@ -21,10 +19,10 @@ pluginManagement {
         id("org.jetbrains.compose") version composeVersion apply false
     }
 }
-rootProject.name = "Demo"
+rootProject.name = "MyTask"
 
 
-include(":mytask-ui-common")
-include(":mytask-ui-android")
-include(":mytask-ui-desktop")
+include(":shared")
+include(":androidApp")
+include(":desktopApp")
 
