@@ -12,8 +12,10 @@ repositories {
 }
 
 dependencies {
+    val androidxActivity = project.ext.get("androidxActivity")
+
     implementation(project(":mytask-ui-common"))
-    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.activity:activity-compose:$androidxActivity")
 }
 
 android {

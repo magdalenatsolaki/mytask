@@ -42,8 +42,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.appcompat:appcompat:1.6.0")
-                api("androidx.core:core-ktx:1.9.0")
+                val appcompatVersion = project.ext.get("appcompatVersion")
+                val coreKtxVersion = project.ext.get("coreKtxVersion")
+
+                api("androidx.appcompat:appcompat:$appcompatVersion")
+                api("androidx.core:core-ktx:$coreKtxVersion")
             }
         }
         val desktopMain by getting {

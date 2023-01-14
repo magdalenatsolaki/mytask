@@ -23,11 +23,10 @@ allprojects {
 }
 
 plugins {
-    kotlin("multiplatform").version(extra["kotlin.version"] as String)  apply false
-    kotlin("jvm").version(extra["kotlin.version"] as String)  apply false
-    kotlin("android").version(extra["kotlin.version"] as String)  apply false
-    id("com.android.application").version(extra["agp.version"] as String)  apply false
-    id("com.android.library").version(extra["agp.version"] as String)  apply false
-    id("org.jetbrains.compose").version(extra["compose.version"] as String)  apply false
-    application
+    kotlin("multiplatform") apply false
+    kotlin("jvm") apply false
+    kotlin("android") apply false
+    id("com.android.application") apply false
+    id("com.android.library") apply false
+    id("org.jetbrains.compose") apply false
 }
