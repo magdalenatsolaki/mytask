@@ -26,7 +26,12 @@ plugins {
     kotlin("multiplatform") apply false
     kotlin("jvm") apply false
     kotlin("android") apply false
+    kotlin("plugin.allopen") apply false
+    kotlin("plugin.jpa") apply false
+    kotlin("plugin.spring") apply false
     id("com.android.application") apply false
     id("com.android.library") apply false
     id("org.jetbrains.compose") apply false
+    id("org.springframework.boot") apply false
+    id("io.spring.dependency-management") apply false
 }

@@ -7,10 +7,6 @@ plugins {
 group = "de.masterthesis"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    google()
-}
-
 dependencies {
     val androidxActivity = project.ext.get("androidxActivity")
 

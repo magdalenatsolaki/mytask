@@ -1,0 +1,27 @@
+logging:
+  level:
+    web: debug
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:./db/testdb
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  h2:
+    console:
+      settings:
+        web-admin-password: admin
+      enabled: true
+server:
+  port: 8080
+springdoc:
+  swagger-ui:
+    path: /swagger
+    operationsSorter: method
+    enabled: true
+    csrf:
+      enabled: true
