@@ -8,10 +8,8 @@ group = "de.masterthesis"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    val androidxActivity = project.ext.get("androidxActivity")
-
     implementation(project(":shared"))
-    implementation("androidx.activity:activity-compose:$androidxActivity")
+    implementation(libs.activity.compose)
 }
 
 android {

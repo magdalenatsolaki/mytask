@@ -1,0 +1,29 @@
+[versions]
+gradleplugin = "7.3.1"
+kotlin = "1.7.20"
+coreKtx = "1.9.0"
+appCompat = "1.6.0"
+compose = "1.2.2"
+springboot = "3.0.1"
+springDepMngt = "1.1.0"
+activityCompose = "1.6.1"
+openApiWebMvc = "2.0.2"
+
+[libraries]
+android-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+android-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+spring-openapi = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "openApiWebMvc" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradleplugin" }
+android-library = { id = "com.android.library", version.ref = "gradleplugin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+springboot = { id = "org.springframework.boot", version.ref = "springboot" }
+spring-depmngt = { id = "io.spring.dependency-management", version.ref = "springDepMngt" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-plugin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
