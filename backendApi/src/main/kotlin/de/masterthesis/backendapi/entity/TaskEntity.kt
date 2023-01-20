@@ -8,12 +8,12 @@ import jakarta.persistence.ManyToOne
 import java.time.LocalDateTime
 
 @Entity(name = "tasks")
-class Task(
+class TaskEntity(
     @Id @GeneratedValue var id: Long = 0,
     var title: String,
     var headline: String,
     var content: String,
-    @ManyToOne var author: User,
+    @ManyToOne var author: UserEntity,
     var slug: String = title.toSlug(),
     var addedAt: LocalDateTime = LocalDateTime.now()
 )

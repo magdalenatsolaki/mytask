@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 import java.util.*
 
 @Entity(name = "users")
-class User(
+class UserEntity(
     @Id
     @GeneratedValue
     val id: UUID = UUID.randomUUID(),

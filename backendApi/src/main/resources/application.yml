@@ -19,8 +19,9 @@ spring:
 server:
   port: 8080
 springdoc:
+  showActuator: true
   swagger-ui:
-    path: /swagger
+    path: /swagger-ui.html
     operationsSorter: method
     enabled: true
     csrf:

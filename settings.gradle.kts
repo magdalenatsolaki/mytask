@@ -10,5 +10,4 @@ rootProject.name = "MyTask"
 
 include(":shared")
 include(":androidApp")
-include(":desktopApp")
 include(":backendApi")
