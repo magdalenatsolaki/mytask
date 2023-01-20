@@ -1,6 +1,5 @@
 package de.masterthesis.backendapi.entity
 
-import de.masterthesis.backendapi.toSlug
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.Id
@@ -14,6 +13,5 @@ class TaskEntity(
     var headline: String,
     var content: String,
     @ManyToOne var author: UserEntity,
-    var slug: String = title.toSlug(),
     var addedAt: LocalDateTime = LocalDateTime.now()
 )

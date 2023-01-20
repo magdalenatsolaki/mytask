@@ -31,7 +31,7 @@ class UserController(private val userRepository: UserRepository, private val tas
 
     @GetMapping
     override fun readAll(): ResponseEntity<List<UserResponse>> {
-        return ResponseEntity.ok(userRepository.findAll().map { it.toResponse() })
+            return ResponseEntity.ok(userRepository.findAll().map { it.toResponse() })
     }
 
 }
