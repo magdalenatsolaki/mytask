@@ -1,12 +1,13 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("org.springframework.boot")
-    id("io.spring.dependency-management")
-    kotlin("jvm")
-    kotlin("plugin.spring")
-    kotlin("plugin.jpa")
-    kotlin("plugin.allopen")
+    alias(libs.plugins.springboot)
+    alias(libs.plugins.spring.depmngt)
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.plugin.spring)
+    alias(libs.plugins.kotlin.plugin.jpa)
+    alias(libs.plugins.kotlin.plugin.allopen)
 }
 
 allOpen {
@@ -24,18 +25,17 @@ repositories {
 }
 
 dependencies {
-    val openApiWebMvc = project.ext.get("openApiWebMvc")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation(libs.springboot.jpa)
+    implementation(libs.springboot.web)
+    implementation(libs.springboot.validation)
+    implementation(libs.jackson)
+    implementation(libs.kotlin.reflect)
+    implementation(libs.kotlin.stdlib.jdk8)
     implementation(libs.spring.openapi)
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    runtimeOnly("com.h2database:h2")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation(kotlin("script-runtime"))
+    implementation(libs.kotlin.script.runtime)
+    developmentOnly(libs.springboot.devtools)
+    runtimeOnly(libs.h2)
+    testImplementation(libs.springboot.test)
 }
 
 tasks.withType<KotlinCompile> {

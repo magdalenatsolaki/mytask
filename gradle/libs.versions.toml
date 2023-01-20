@@ -4,7 +4,7 @@ kotlin = "1.7.20"
 coreKtx = "1.9.0"
 appCompat = "1.6.0"
 compose = "1.2.2"
-springboot = "3.0.1"
+springboot = "3.0.2"
 springDepMngt = "1.1.0"
 activityCompose = "1.6.1"
 openApiWebMvc = "2.0.2"
@@ -14,6 +14,16 @@ android-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" 
 android-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 spring-openapi = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "openApiWebMvc" }
+springboot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+springboot-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+springboot-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+springboot-devtools = { module = "org.springframework.boot:spring-boot-devtools" }
+springboot-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+jackson = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
+kotlin-script-runtime = { module = "org.jetbrains.kotlin:kotlin-script-runtime" }
+h2 = { module = "com.h2database:h2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradleplugin" }
