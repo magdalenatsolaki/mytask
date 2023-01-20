@@ -24,7 +24,7 @@ allprojects {
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    alias(libs.plugins.kotlin.multiplatform).apply(false)
+    alias(libs.plugins.kotlin.multiplatform).apply (false)
     alias(libs.plugins.kotlin.jvm).apply(false)
     alias(libs.plugins.kotlin.android).apply(false)
     alias(libs.plugins.kotlin.plugin.allopen).apply(false)
@@ -37,3 +37,7 @@ plugins {
     alias(libs.plugins.spring.depmngt).apply(false)
 }
 println("")
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
+}

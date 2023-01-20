@@ -8,7 +8,7 @@ springboot = "3.0.2"
 springDepMngt = "1.1.0"
 activityCompose = "1.6.1"
 openApiWebMvc = "2.0.2"
-
+junit = "5.9.2"
 [libraries]
 android-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 android-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
@@ -23,7 +23,11 @@ jackson = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
 kotlin-script-runtime = { module = "org.jetbrains.kotlin:kotlin-script-runtime" }
+kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common" }
+kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
 h2 = { module = "com.h2database:h2" }
+junit = { module = "org.junit.jupiter:junit-jupiter-api",version.ref="junit"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradleplugin" }

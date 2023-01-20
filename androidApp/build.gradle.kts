@@ -11,6 +11,9 @@ version = "1.0-SNAPSHOT"
 dependencies {
     implementation(project(":shared"))
     implementation(libs.activity.compose)
+    api(compose.runtime)
+    api(compose.foundation)
+    api(compose.material)
 }
 
 android {
