@@ -10,9 +10,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.responses.ApiResponses
 import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestParam
 import java.util.*
 
 
@@ -45,7 +45,7 @@ interface IUserController {
             ApiResponse(responseCode = "400", description = "Bad request", content = [Content()]),
             ApiResponse(responseCode = "404", description = "Not found", content = [Content()])]
     )
-    fun read(@Valid @RequestParam id: UUID): ResponseEntity<UserResponse>
+    fun read(@Valid @PathVariable id: UUID): ResponseEntity<UserResponse>
 
     @Operation(summary = "Get a user by mail")
     @ApiResponses(

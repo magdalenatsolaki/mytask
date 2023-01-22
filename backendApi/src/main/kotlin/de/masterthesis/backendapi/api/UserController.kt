@@ -21,7 +21,7 @@ class UserController(private val userService: UserService) :
     }
 
     @GetMapping("/{id}")
-    override fun read(@Valid @RequestParam id: UUID): ResponseEntity<UserResponse> {
+    override fun read(@Valid @PathVariable id: UUID): ResponseEntity<UserResponse> {
         return ResponseEntity.ok(userService.findById(id))
     }
 

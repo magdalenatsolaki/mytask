@@ -9,6 +9,10 @@ springDepMngt = "1.1.0"
 activityCompose = "1.6.1"
 openApiWebMvc = "2.0.2"
 junit = "5.9.2"
+springOpenApiGradleplugin = "1.6.0"
+openApiGenerator = "6.2.1"
+composeMaterial3 = "1.0.1"
+
 [libraries]
 android-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 android-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
@@ -27,7 +31,8 @@ kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common" }
 kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
 h2 = { module = "com.h2database:h2" }
-junit = { module = "org.junit.jupiter:junit-jupiter-api",version.ref="junit"}
+junit = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradleplugin" }
@@ -35,9 +40,11 @@ android-library = { id = "com.android.library", version.ref = "gradleplugin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 springboot = { id = "org.springframework.boot", version.ref = "springboot" }
 spring-depmngt = { id = "io.spring.dependency-management", version.ref = "springDepMngt" }
+spring-openapi-gradleplugin = { id = "org.springdoc.openapi-gradle-plugin", version.ref = "springOpenApiGradleplugin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
 kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 kotlin-plugin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+openapi-generator = { id = "org.openapi.generator", version.ref = "openApiGenerator" }

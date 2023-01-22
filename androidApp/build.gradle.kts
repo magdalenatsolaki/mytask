@@ -11,9 +11,10 @@ version = "1.0-SNAPSHOT"
 dependencies {
     implementation(project(":shared"))
     implementation(libs.activity.compose)
+    implementation(libs.compose.material3)
     api(compose.runtime)
     api(compose.foundation)
-    api(compose.material)
+    //api(compose.material)
 }
 
 android {
@@ -34,4 +35,19 @@ android {
             isMinifyEnabled = false
         }
     }
+    namespace = "de.masterthesis.android"
+
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
 }

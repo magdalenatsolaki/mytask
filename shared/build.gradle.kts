@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.openapi.generator)
 }
 
 group = "de.masterthesis"
@@ -50,4 +51,25 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    namespace = "de.masterthesis.shared"
+}
+/**
+ * doku quelle thesis: https://openapi-generator.tech/docs/generators/kotlin/
+ * @todo muss in die Thesis:
+ * bei der auswahl der configoptions muss auch kmm geachtet werden, da der generierte code auch für ios laufen muss und daher kotlin native supported sein muss
+ */
+val openapiSpecFile = "./openapi.json"
+dependencies {
+    implementation("androidx.core:core-ktx:+")
+}
+
+openApiGenerate {
+    generatorName.set("kotlin")
+    inputSpec.set(openapiSpecFile)
+    //outputDir.set("$buildDir/generated")
+    configFile.set("./api-config.json")
+
+}
+openApiValidate {
+    inputSpec.set(openapiSpecFile)
 }

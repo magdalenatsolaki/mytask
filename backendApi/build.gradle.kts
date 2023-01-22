@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlin.plugin.spring)
     alias(libs.plugins.kotlin.plugin.jpa)
     alias(libs.plugins.kotlin.plugin.allopen)
+    alias(libs.plugins.spring.openapi.gradleplugin)
 }
 
 allOpen {
@@ -47,4 +48,8 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+openApi {
+    outputDir.set(file("../shared/"))
 }

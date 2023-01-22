@@ -5,8 +5,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
-        classpath("com.android.tools.build:gradle")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+        classpath("com.android.tools.build:gradle:7.4.0")
     }
 }
 
@@ -24,7 +24,7 @@ allprojects {
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    alias(libs.plugins.kotlin.multiplatform).apply (false)
+    alias(libs.plugins.kotlin.multiplatform).apply(false)
     alias(libs.plugins.kotlin.jvm).apply(false)
     alias(libs.plugins.kotlin.android).apply(false)
     alias(libs.plugins.kotlin.plugin.allopen).apply(false)
@@ -35,6 +35,7 @@ plugins {
     alias(libs.plugins.compose).apply(false)
     alias(libs.plugins.springboot).apply(false)
     alias(libs.plugins.spring.depmngt).apply(false)
+    alias(libs.plugins.spring.openapi.gradleplugin).apply(false)
 }
 println("")
 
