@@ -12,10 +12,24 @@ import java.util.*
 @Service
 class UserService(private val userRepository: UserRepository, private val taskRepository: TaskRepository) {
     fun save(user: UserEntity): UserEntity {
-        val user = userRepository.save(user)
-        taskRepository.save(TaskEntity(title = "Title1", headline = "Headline1", content = "Content1", author = user))
-        taskRepository.save(TaskEntity(title = "Title2", headline = "Headline2", content = "Content2", author = user))
-        return user
+        val userEntity = userRepository.save(user)
+        taskRepository.save(
+            TaskEntity(
+                title = "Title1",
+                headline = "Headline1",
+                content = "Content1",
+                author = userEntity
+            )
+        )
+        taskRepository.save(
+            TaskEntity(
+                title = "Title2",
+                headline = "Headline2",
+                content = "Content2",
+                author = userEntity
+            )
+        )
+        return userEntity
     }
 
 

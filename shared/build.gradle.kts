@@ -59,17 +59,14 @@ android {
  * bei der auswahl der configoptions muss auch kmm geachtet werden, da der generierte code auch für ios laufen muss und daher kotlin native supported sein muss
  */
 val openapiSpecFile = "./openapi.json"
-dependencies {
-    implementation("androidx.core:core-ktx:+")
-}
 
 openApiGenerate {
     generatorName.set("kotlin")
     inputSpec.set(openapiSpecFile)
     //outputDir.set("$buildDir/generated")
     configFile.set("./api-config.json")
-
 }
+
 openApiValidate {
     inputSpec.set(openapiSpecFile)
 }
