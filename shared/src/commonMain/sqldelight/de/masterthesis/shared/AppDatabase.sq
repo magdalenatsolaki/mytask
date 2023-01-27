@@ -1,0 +1,12 @@
+CREATE TABLE task (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    erledigt INTEGER AS Boolean DEFAULT NULL,
+    kurzbeschreibung TEXT NOT NULL,
+    beschreibung TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+
+CREATE INDEX task_kurzbeschreibung ON task(kurzbeschreibung);
+
+INSERT INTO task (id, erledigt, kurzbeschreibung,beschreibung,created_at)
+VALUES ('56a9ba35-95b9-4650-ae58-4ecc53ff9b4c', FALSE, 'Gassi gehen','Piet platzt gleich wir müssen losssss!!','2023-01-27 22:22:22+01');

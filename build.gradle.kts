@@ -36,6 +36,7 @@ plugins {
     alias(libs.plugins.springboot).apply(false)
     alias(libs.plugins.spring.depmngt).apply(false)
     alias(libs.plugins.spring.openapi.gradleplugin).apply(false)
+    alias(libs.plugins.sqldelight).apply(false)
 }
 println("")
 
