@@ -1,4 +1,4 @@
-package de.masterthesis.android.ui.bars
+package de.masterthesis.android.ui
 
 import android.util.Log
 import androidx.compose.material.icons.Icons

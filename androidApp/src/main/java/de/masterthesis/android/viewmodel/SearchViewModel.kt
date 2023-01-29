@@ -1,6 +1,5 @@
-package de.masterthesis.android.logic
+package de.masterthesis.android.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,7 +30,6 @@ class SearchViewModel : ViewModel() {
                 filteredList.add(Task(task.kurzbeschreibung))
             }
         }
-        Log.d("MyTaskTag", query.lowercase())
         _list.postValue(filteredList)
     }
 }

@@ -1,6 +1,8 @@
-package de.masterthesis.android.ui.overview
+@file:OptIn(ExperimentalMaterial3Api::class)
 
-import androidx.compose.foundation.layout.*
+package de.masterthesis.android.ui
+
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
@@ -9,9 +11,9 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import de.masterthesis.android.R
-import de.masterthesis.android.logic.SearchViewModel
+import de.masterthesis.android.viewmodel.SearchViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+@ExperimentalMaterial3Api
 @Composable
 fun OverviewTaskList(modifier: Modifier, innerPadding: PaddingValues, viewModel: SearchViewModel) {
     val taskList = viewModel.list.observeAsState().value

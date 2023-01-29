@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
-group = "de.masterthesis"
+group = "de.masterthesis.android"
 version = "1.0-SNAPSHOT"
 
 dependencies {
