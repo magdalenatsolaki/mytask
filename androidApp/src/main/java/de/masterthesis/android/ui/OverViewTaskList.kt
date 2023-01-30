@@ -35,7 +35,7 @@ fun OverviewTaskList(modifier: Modifier, innerPadding: PaddingValues, viewModel:
                     },
                     trailingContent = {
                         Icon(
-                            painterResource(id = R.drawable.baseline_more_horiz_24),
+                            painterResource(id = R.drawable.baseline_keyboard_arrow_right_24_hexc6),
                             contentDescription = "More",
                         )
                     },
