@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "90135885ef506506620c4911cefb55a95ca2a9a2",
+        "version" : "7.5.0"
+      }
+    },
+    {
+      "identity" : "kmp-nativecoroutines",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rickclephas/KMP-NativeCoroutines.git",
+      "state" : {
+        "revision" : "dfc6b4f059406ec12e598e295b4a3e8d84a434eb",
+        "version" : "0.13.1"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
+        "version" : "6.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}

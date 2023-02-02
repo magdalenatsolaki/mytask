@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		53849A33298C2A230010DD65 /* KMPNativeCoroutinesAsync in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A32298C2A230010DD65 /* KMPNativeCoroutinesAsync */; };
+		53849A35298C2A230010DD65 /* KMPNativeCoroutinesCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A34298C2A230010DD65 /* KMPNativeCoroutinesCombine */; };
+		53849A37298C2A230010DD65 /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A36298C2A230010DD65 /* KMPNativeCoroutinesCore */; };
+		53849A39298C2A230010DD65 /* KMPNativeCoroutinesRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A38298C2A230010DD65 /* KMPNativeCoroutinesRxSwift */; };
+		53849A3C298C2AB60010DD65 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A3B298C2AB60010DD65 /* Kingfisher */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		FDBF040B33D98F5ED3A66377 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */; };
 		FDBF061666232EDA8FAB611B /* LabeledCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */; };
@@ -52,6 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53849A33298C2A230010DD65 /* KMPNativeCoroutinesAsync in Frameworks */,
+				53849A35298C2A230010DD65 /* KMPNativeCoroutinesCombine in Frameworks */,
+				53849A37298C2A230010DD65 /* KMPNativeCoroutinesCore in Frameworks */,
+				53849A39298C2A230010DD65 /* KMPNativeCoroutinesRxSwift in Frameworks */,
+				53849A3C298C2AB60010DD65 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +152,13 @@
 			dependencies = (
 			);
 			name = iosApp;
+			packageProductDependencies = (
+				53849A32298C2A230010DD65 /* KMPNativeCoroutinesAsync */,
+				53849A34298C2A230010DD65 /* KMPNativeCoroutinesCombine */,
+				53849A36298C2A230010DD65 /* KMPNativeCoroutinesCore */,
+				53849A38298C2A230010DD65 /* KMPNativeCoroutinesRxSwift */,
+				53849A3B298C2AB60010DD65 /* Kingfisher */,
+			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +187,10 @@
 				Base,
 			);
 			mainGroup = 7555FF72242A565900829871;
+			packageReferences = (
+				53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
+				53849A3A298C2AB60010DD65 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,6 +441,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMP-NativeCoroutines.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.13.1;
+			};
+		};
+		53849A3A298C2AB60010DD65 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53849A32298C2A230010DD65 /* KMPNativeCoroutinesAsync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesAsync;
+		};
+		53849A34298C2A230010DD65 /* KMPNativeCoroutinesCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCombine;
+		};
+		53849A36298C2A230010DD65 /* KMPNativeCoroutinesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCore;
+		};
+		53849A38298C2A230010DD65 /* KMPNativeCoroutinesRxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesRxSwift;
+		};
+		53849A3B298C2AB60010DD65 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53849A3A298C2AB60010DD65 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7555FF73242A565900829871 /* Project object */;
 }
