@@ -17,7 +17,7 @@ allOpen {
     annotation("jakarta.persistence.MappedSuperclass")
 }
 
-group = "de.masterthesis.backendapi"
+group = "de.masterthesis"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -26,17 +26,10 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.springboot.jpa)
-    implementation(libs.springboot.web)
-    implementation(libs.springboot.validation)
-    implementation(libs.jackson)
-    implementation(libs.kotlin.reflect)
-    implementation(libs.kotlin.stdlib.jdk8)
-    implementation(libs.spring.openapi)
-    implementation(libs.kotlin.script.runtime)
-    developmentOnly(libs.springboot.devtools)
-    runtimeOnly(libs.h2)
-    testImplementation(libs.springboot.test)
+    implementation(libs.bundles.backendApiImpl)
+    developmentOnly(libs.bundles.backendApiDevOnly)
+    runtimeOnly(libs.bundles.backendApiRunOnly)
+    testImplementation(libs.bundles.backendApiTestImp)
 }
 
 tasks.withType<KotlinCompile> {

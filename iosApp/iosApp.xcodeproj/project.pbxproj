@@ -41,9 +41,9 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBF00CA5A1521A306447E87 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
-		FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabeledCheckbox.swift; path = iosApp/LabeledCheckbox.swift; sourceTree = "<group>"; };
-		FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskRow.swift; path = iosApp/TaskRow.swift; sourceTree = "<group>"; };
-		FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckboxToggleStyle.swift; path = iosApp/CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledCheckbox.swift; sourceTree = "<group>"; };
+		FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,15 +66,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		53334EA8298C25B80025F017 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */,
+				FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */,
+				FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */,
+				FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */,
+				FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		53334EA9298C25BC0025F017 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FDBF00CA5A1521A306447E87 /* ModelData.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				7555FFB0242A642200829871 /* Frameworks */,
-				FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */,
-				FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */,
-				FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,14 +106,13 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				53334EA9298C25BC0025F017 /* data */,
+				53334EA8298C25B80025F017 /* ui */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */,
-				FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */,
-				FDBF00CA5A1521A306447E87 /* ModelData.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";

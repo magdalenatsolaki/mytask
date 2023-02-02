@@ -9,8 +9,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
-import de.masterthesis.android.ui.OverviewTaskList
 import de.masterthesis.android.ui.BottomBar
+import de.masterthesis.android.ui.OverviewTaskList
 import de.masterthesis.android.ui.SearchAppBar
 import de.masterthesis.android.viewmodel.SearchViewModel
 

@@ -1,21 +1,30 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
+    alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose)
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
-group = "de.masterthesis.android"
+group = "de.masterthesis"
 version = "1.0-SNAPSHOT"
 
-dependencies {
-    implementation(project(":shared"))
-    implementation(libs.activity.compose)
-    implementation(libs.compose.material3)
-    implementation(libs.bundles.lifecycle)
-    implementation(libs.runtime.livedata)
-    api(compose.runtime)
-    api(compose.foundation)
+kotlin {
+    android()
+    sourceSets {
+        val androidMain by getting {
+            dependencies {
+                dependencies {
+                    implementation(project(":shared"))
+                    implementation(libs.bundles.androidAppImpl)
+                    implementation(libs.activity.compose)
+                    implementation(libs.compose.material3)
+                    implementation(libs.runtime.livedata)
+                    api(compose.runtime)
+                    api(compose.foundation)
+                }
+            }
+        }
+    }
 }
 
 android {
@@ -23,6 +32,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
+        applicationId = "de.masterthesis.android"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -50,7 +60,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
     }
 }
