@@ -10,7 +10,7 @@ struct LabeledCheckbox: View {
         }) {
             HStack {
                 Toggle(labelText, isOn: $isChecked)
-                        .toggleStyle(CheckboxToggleStyle())
+                    .toggleStyle(CheckboxToggleStyle())
             }
         }
     }

@@ -20,21 +20,21 @@ struct CheckboxToggleStyle: ToggleStyle {
         HStack {
             ZStack {
                 Image(systemName: Config.offIconName)
-                        .resizable()
-                        .foregroundColor(offColor)
+                    .resizable()
+                    .foregroundColor(offColor)
 
                 Image(systemName: Config.onIconName)
-                        .resizable()
-                        .foregroundColor(onColor)
-                        // Toggling opacity is the easiest way to animate
-                        // the image transition.
-                        .opacity(configuration.isOn ? 1 : 0)
+                    .resizable()
+                    .foregroundColor(onColor)
+                // Toggling opacity is the easiest way to animate
+                // the image transition.
+                .opacity(configuration.isOn ? 1 : 0)
             }
-                    .frame(width: Config.iconSize, height: Config.iconSize)
-                    .animation(.easeInOut(duration: Config.animationDuration))
-                    .onTapGesture {
-                        configuration.isOn.toggle()
-                    }
+                .frame(width: Config.iconSize, height: Config.iconSize)
+                .animation(.easeInOut(duration: Config.animationDuration), value: 1.0)
+                .onTapGesture {
+                configuration.isOn.toggle()
+            }
             configuration.label
 
         }

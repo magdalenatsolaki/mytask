@@ -1,16 +1,16 @@
-package de.masterthesis.shared.dto
+package de.masterthesis.shared.model
 
 import de.masterthesis.shared.randomUUID
 
 data class Task(
     var kurzbeschreibung: String,
-    var erledigt: Boolean = false,
+    var isErledigt: Boolean = false,
     val id: String = randomUUID()
 ) {
     fun isOffen(): Boolean = this.getState() == TaskState.OPEN
     fun isAbgeschlossen(): Boolean = !isOffen()
 
-    private fun getState(): TaskState = if (!erledigt) TaskState.OPEN else TaskState.DONE
+    private fun getState(): TaskState = if (!isErledigt) TaskState.OPEN else TaskState.DONE
 }
 
 enum class TaskState(val state: String) {
