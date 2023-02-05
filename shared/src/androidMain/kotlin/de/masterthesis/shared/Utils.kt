@@ -1,5 +1,8 @@
 package de.masterthesis.shared
 
-import java.util.*
+import java.util.UUID
 
-actual fun randomUUID() = UUID.randomUUID().toString()
+actual fun randomUUID(): String =
+    UUID.randomUUID().toString()
+
+
