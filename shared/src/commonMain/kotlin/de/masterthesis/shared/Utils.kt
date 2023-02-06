@@ -1,10 +1,9 @@
 package de.masterthesis.shared
 
+import de.masterthesis.shared.model.Task
+
 expect fun randomUUID(): String
 
-
-/*
-import de.masterthesis.shared.model.Task
 fun getSampleData() = listOf(
     Task(
         "Einkaufen",
@@ -25,5 +24,3 @@ fun getSampleData() = listOf(
         true
     )
 )
-
- */
