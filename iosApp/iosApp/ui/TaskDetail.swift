@@ -1,13 +1,12 @@
 import SwiftUI
-import shared
 import Kingfisher
 
 struct TaskDetail: View {
-    @EnvironmentObject var modelData: ModelData
-    var task: Task
+    @ObservedObject var viewModel: TodoListViewModel
+    var task: TodoItem
 
     var taskIndex: Int {
-        modelData.tasks.firstIndex(where: { $0.id == task.id })!
+        viewModel.todos.firstIndex(where: { $0.id == task.id })!
     }
 
     var body: some View {
@@ -15,16 +14,16 @@ struct TaskDetail: View {
             HStack {
                 Text("ID").bold()
                 Divider()
-                Text(task.id)
+                Text(task.id.uuidString)
             }
 
             HStack {
                 Text("Kurzbeschreibung").bold()
                 Divider()
-                TextField("Kurzbeschreibung", text: $modelData.tasks[taskIndex].kurzbeschreibung)
+                TextField("Kurzbeschreibung", text: $viewModel.todos[taskIndex].title)
             }
 
-            LabeledCheckbox(labelText: "Erledigt", isChecked: $modelData.tasks[taskIndex].erledigt)
+            LabeledCheckbox(labelText: "Erledigt", isChecked: $viewModel.todos[taskIndex].isCompleted)
 
             //KFImage(URL(string: "https://picsum.photos/seed/" + randomString(length: 5) + "/320/320")!)
         }

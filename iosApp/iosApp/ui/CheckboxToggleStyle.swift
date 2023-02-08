@@ -36,7 +36,7 @@ struct CheckboxToggleStyle: ToggleStyle {
                 configuration.isOn.toggle()
             }
             configuration.label
-
+                .strikethrough(configuration.isOn)
         }
 
     }

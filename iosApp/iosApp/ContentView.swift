@@ -1,20 +1,15 @@
-import SimpleToast
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var modelData: ModelData
+    @ObservedObject var viewModel = TodoListViewModel()
     @State private var username: String = ""
     @State var showUsernameView: Bool
     @State private var searchText: String = ""
-    @State private var showToast = false
-    private let toastOptions = SimpleToastOptions(
-        hideAfter: 5
-    )
 
-    private var prefs = Prefs.shared
+    private var user = UserRepository()
 
     init() {
-        showUsernameView = prefs.isUsernameEmpty()
+        showUsernameView = user.isUsernameEmpty()
     }
     var body: some View {
 
@@ -24,8 +19,7 @@ struct ContentView: View {
                     VStack {
                         TextField("Username", text: $username)
                         Button("Login", action: {
-                            prefs.username = username
-                            showToast.toggle()
+                            user.storeInfo(name: username)
                             showUsernameView.toggle()
                         })
                     }
@@ -34,21 +28,13 @@ struct ContentView: View {
             }
             else {
                 List {
-                    VStack {
-                        TaskView()
-                    }
-                        .simpleToast(isPresented: $showToast, options: toastOptions) {
-                        HStack {
-                            Text("Willkommen " + prefs.username)
-                        }
-                            .padding()
-                            .background(Color.gray.opacity(0.8))
-                            .foregroundColor(Color.white)
-                            .cornerRadius(10)
-                    }
+                    TaskView(viewModel: viewModel)
                 }
                     .searchable(text: $searchText, prompt: "Suche")
                     .navigationTitle("MyTask")
+                    .navigationBarItems(trailing: Button(action: viewModel.addTodo) {
+                        Image(systemName: "plus")
+                    })
             }
         }
     }

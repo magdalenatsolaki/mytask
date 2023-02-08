@@ -10,22 +10,22 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		5329F14529944F5D000C73AE /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5329F14429944F5D000C73AE /* TodoListViewModel.swift */; };
+		5329F14729944FA8000C73AE /* TodoListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5329F14629944FA8000C73AE /* TodoListState.swift */; };
+		5329F14929944FB8000C73AE /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5329F14829944FB8000C73AE /* TodoListViewController.swift */; };
 		53849A33298C2A230010DD65 /* KMPNativeCoroutinesAsync in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A32298C2A230010DD65 /* KMPNativeCoroutinesAsync */; };
 		53849A35298C2A230010DD65 /* KMPNativeCoroutinesCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A34298C2A230010DD65 /* KMPNativeCoroutinesCombine */; };
 		53849A37298C2A230010DD65 /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A36298C2A230010DD65 /* KMPNativeCoroutinesCore */; };
 		53849A39298C2A230010DD65 /* KMPNativeCoroutinesRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A38298C2A230010DD65 /* KMPNativeCoroutinesRxSwift */; };
 		53849A3C298C2AB60010DD65 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A3B298C2AB60010DD65 /* Kingfisher */; };
-		53849A3E298C35C70010DD65 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53849A3D298C35C70010DD65 /* Prefs.swift */; };
 		53849A40298C3AF40010DD65 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53849A3F298C3AF40010DD65 /* TaskView.swift */; };
 		53849A42298C3CA40010DD65 /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53849A41298C3CA40010DD65 /* UsernameView.swift */; };
-		53849A45298C41250010DD65 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A44298C41250010DD65 /* AlertToast */; };
-		53849A48298C454A0010DD65 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 53849A47298C454A0010DD65 /* SimpleToast */; };
+		53E5F8042992DE13006497A7 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E5F8032992DE13006497A7 /* UserRepository.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		FDBF040B33D98F5ED3A66377 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */; };
 		FDBF061666232EDA8FAB611B /* LabeledCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */; };
 		FDBF0B90149C7F7C82003695 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */; };
 		FDBF0C22CC7EA49C0635B9EC /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */; };
-		FDBF0CA01CACFD0D7EDB5E40 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF00CA5A1521A306447E87 /* ModelData.swift */; };
+		FDBF0CA01CACFD0D7EDB5E40 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF00CA5A1521A306447E87 /* TodoItem.swift */; };
 		FDBF0EB1C23FD0A43A35D00D /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,18 +46,20 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		53849A3D298C35C70010DD65 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		5329F14429944F5D000C73AE /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		5329F14629944FA8000C73AE /* TodoListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListState.swift; sourceTree = "<group>"; };
+		5329F14829944FB8000C73AE /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		53849A3F298C3AF40010DD65 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		53849A41298C3CA40010DD65 /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
+		53E5F8032992DE13006497A7 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDBF00CA5A1521A306447E87 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		FDBF00CA5A1521A306447E87 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledCheckbox.swift; sourceTree = "<group>"; };
 		FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		FDBF0BB7250C112E68CA83DA /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
-		FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +70,7 @@
 				53849A33298C2A230010DD65 /* KMPNativeCoroutinesAsync in Frameworks */,
 				53849A35298C2A230010DD65 /* KMPNativeCoroutinesCombine in Frameworks */,
 				53849A37298C2A230010DD65 /* KMPNativeCoroutinesCore in Frameworks */,
-				53849A45298C41250010DD65 /* AlertToast in Frameworks */,
 				53849A39298C2A230010DD65 /* KMPNativeCoroutinesRxSwift in Frameworks */,
-				53849A48298C454A0010DD65 /* SimpleToast in Frameworks */,
 				53849A3C298C2AB60010DD65 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				53849A3F298C3AF40010DD65 /* TaskView.swift */,
-				FDBF0BBE123A8C7A809C0DA0 /* TaskProvider.swift */,
 				FDBF039B8068B5EBC5B54411 /* TaskDetail.swift */,
 				FDBF09F3E090B70CBAEC7AD5 /* TaskRow.swift */,
 				FDBF092ABEF0A27BC9099316 /* LabeledCheckbox.swift */,
@@ -103,9 +102,20 @@
 		53334EA9298C25BC0025F017 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				FDBF00CA5A1521A306447E87 /* ModelData.swift */,
+				FDBF00CA5A1521A306447E87 /* TodoItem.swift */,
+				5329F14429944F5D000C73AE /* TodoListViewModel.swift */,
+				5329F14629944FA8000C73AE /* TodoListState.swift */,
+				5329F14829944FB8000C73AE /* TodoListViewController.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		53E5F8022992DE01006497A7 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				53E5F8032992DE13006497A7 /* UserRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 		7555FF72242A565900829871 = {
@@ -128,6 +138,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				53E5F8022992DE01006497A7 /* repository */,
 				53334EA9298C25BC0025F017 /* data */,
 				53334EA8298C25B80025F017 /* ui */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
@@ -135,7 +146,6 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				53849A3D298C35C70010DD65 /* Prefs.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -171,8 +181,6 @@
 				53849A36298C2A230010DD65 /* KMPNativeCoroutinesCore */,
 				53849A38298C2A230010DD65 /* KMPNativeCoroutinesRxSwift */,
 				53849A3B298C2AB60010DD65 /* Kingfisher */,
-				53849A44298C41250010DD65 /* AlertToast */,
-				53849A47298C454A0010DD65 /* SimpleToast */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
@@ -205,8 +213,6 @@
 			packageReferences = (
 				53849A31298C2A230010DD65 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
 				53849A3A298C2AB60010DD65 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				53849A43298C41250010DD65 /* XCRemoteSwiftPackageReference "AlertToast" */,
-				53849A46298C454A0010DD65 /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -254,17 +260,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53849A3E298C35C70010DD65 /* Prefs.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				53E5F8042992DE13006497A7 /* UserRepository.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				53849A40298C3AF40010DD65 /* TaskView.swift in Sources */,
-				FDBF040B33D98F5ED3A66377 /* TaskProvider.swift in Sources */,
+				5329F14529944F5D000C73AE /* TodoListViewModel.swift in Sources */,
 				FDBF0C22CC7EA49C0635B9EC /* TaskDetail.swift in Sources */,
 				FDBF0EB1C23FD0A43A35D00D /* TaskRow.swift in Sources */,
-				FDBF0CA01CACFD0D7EDB5E40 /* ModelData.swift in Sources */,
+				5329F14929944FB8000C73AE /* TodoListViewController.swift in Sources */,
+				FDBF0CA01CACFD0D7EDB5E40 /* TodoItem.swift in Sources */,
 				FDBF061666232EDA8FAB611B /* LabeledCheckbox.swift in Sources */,
 				FDBF0B90149C7F7C82003695 /* CheckboxToggleStyle.swift in Sources */,
 				53849A42298C3CA40010DD65 /* UsernameView.swift in Sources */,
+				5329F14729944FA8000C73AE /* TodoListState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,22 +487,6 @@
 				version = 7.5.0;
 			};
 		};
-		53849A43298C41250010DD65 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elai950/AlertToast.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		53849A46298C454A0010DD65 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
-			requirement = {
-				kind = exactVersion;
-				version = 0.6.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -522,16 +514,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 53849A3A298C2AB60010DD65 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		53849A44298C41250010DD65 /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 53849A43298C41250010DD65 /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
-		};
-		53849A47298C454A0010DD65 /* SimpleToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 53849A46298C454A0010DD65 /* XCRemoteSwiftPackageReference "SimpleToast" */;
-			productName = SimpleToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

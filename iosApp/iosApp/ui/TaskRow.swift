@@ -2,17 +2,14 @@ import SwiftUI
 import shared
 
 struct TaskRow: View {
-    @EnvironmentObject var modelData: ModelData
-    var task: Task
+    @ObservedObject var viewModel: TodoListViewModel
+    var task: TodoItem
 
-    var taskIndex: Int {
-        modelData.tasks.firstIndex(where: { $0.id == task.id })!
-    }
-
-    //@State private var isChecked: Bool = false
     var body: some View {
-        HStack {
-            LabeledCheckbox(labelText: task.kurzbeschreibung, isChecked: $modelData.tasks[taskIndex].erledigt)
+        if let index = viewModel.todos.firstIndex(where: { $0.id == task.id }) {
+            HStack {
+                LabeledCheckbox(labelText: task.title, isChecked: $viewModel.todos[index].isCompleted)
+            }
         }
     }
 }

@@ -3,42 +3,24 @@ import shared
 
 
 struct TaskView: View {
-    @EnvironmentObject var modelData: ModelData
-    @State private var searchText: String = ""
-    @State var showCheckedOnly: Bool = false
+    @ObservedObject var viewModel: TodoListViewModel
 
-    private var prefs = Prefs.shared
-
-    /*
-    var filteredTasks: [Task] {
-        if searchText.isEmpty {
-            return listItems
-        } else {
-            return listItems.filter { task in
-                task.kurzbeschreibung.localizedCaseInsensitiveContains(searchText)
-            }
-        }
-    }*/
-
-    var filteredTasks: [Task] {
-        modelData.tasks.filter { task in
-            (!showCheckedOnly || !task.isAbgeschlossen())
-        }
-    }
+    let user = UserRepository()
 
     var body: some View {
-        Toggle(isOn: $showCheckedOnly) {
+        Toggle(isOn: $viewModel.showCheckedOnly) {
             Text("Nur offene")
         }
-        ForEach(filteredTasks) { task in
+        ForEach(viewModel.getFilteredList()) { task in
             NavigationLink {
-                TaskDetail(task: task)
+                TaskDetail(viewModel: viewModel, task: task)
             } label: {
-                TaskRow(task: task)
+                TaskRow(viewModel: viewModel, task: task)
             }
-            
+
         }
-        ZStack{
-            Text("Username: " + prefs.username)
-        }}
+            .onDelete(perform: viewModel.deleteTodo)
+        ZStack {
+            Text("Username: " + user.getUserInfo()!)
+        } }
 }

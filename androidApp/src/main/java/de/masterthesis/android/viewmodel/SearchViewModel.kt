@@ -3,15 +3,15 @@ package de.masterthesis.android.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import de.masterthesis.shared.getSampleData
 import de.masterthesis.shared.model.Task
+import de.masterthesis.shared.sample.SampleData
 
 class SearchViewModel : ViewModel() {
     private var _list = MutableLiveData<List<Task>>()
     val list: LiveData<List<Task>>
         get() = _list
 
-    private fun taskListData() = getSampleData()
+    private fun taskListData() = SampleData().getTaskList()
 
     init {
         loadActors()
